@@ -2,42 +2,48 @@ import React, {useEffect, useState} from "react";
 import classes from './AvailableMeals.module.css';
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
+import {fetchMeals} from "../../store/cart-action";
 
-const DATABASE_URL = "http://localhost:3001"
+// const DATABASE_URL = "http://localhost:3001"
 
 const AvailableMeals = () => {
     const [meals,setMeals] = useState([])
     const [isLoading,setIsLoading] = useState(true)
     const [httpError,setHttpError] = useState()
-    useEffect( ()=>{
-
-        const fetchMeals = async () => {
-            setIsLoading(true)
-            // const response = await fetch(`${DATABASE_URL}/meals`)
-            // if(!(response.ok)){
-            //     throw new Error("Something went wrong!!")
-            // }
-            // const responseData = await response.json()
-            const meals = await fetchMeals()
-            // const loadedMeals = []
-            // for(const key in responseData){
-            //     loadedMeals.push({
-            //         id:key,
-            //         name:responseData[key].name,
-            //         description:responseData[key].description,
-            //         price:+responseData[key].price
-            //     });
-            // }
-            // console.log("loaded meals",loadedMeals)
-            setMeals(meals);
-            setIsLoading(false)
-        }
-
+    useEffect(()=>{
+        setIsLoading(true)
+        
         fetchMeals()
-            .catch((err)=>{
-                setIsLoading(false)
-                setHttpError(err.message)
-            })
+        .then((meals)=>{
+            setMeals(meals)
+            setIsLoading(false)
+        })
+        // const fetchMeals = async () => {
+        //     setIsLoading(true)
+        //     // const response = await fetch(`${DATABASE_URL}/meals`)
+        //     // if(!(response.ok)){
+        //     //     throw new Error("Something went wrong!!")
+        //     // }
+        //     // const responseData = await response.json()
+        //     // const loadedMeals = []
+        //     // for(const key in responseData){
+        //     //     loadedMeals.push({
+        //     //         id:key,
+        //     //         name:responseData[key].name,
+        //     //         description:responseData[key].description,
+        //     //         price:+responseData[key].price
+        //     //     });
+        //     // }
+        //     // console.log("loaded meals",loadedMeals)
+        //     setMeals(meals);
+        //     setIsLoading(false)
+        // }
+
+        // fetchMeals()
+        //     .catch((err)=>{
+        //         setIsLoading(false)
+        //         setHttpError(err.message)
+        //     })
     },[])
 
     const mealsList = meals.map((meal) =>
