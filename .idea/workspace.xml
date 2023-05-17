@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dc3ff0af-3fdc-4b22-97d1-57feb5bab610" name="Changes" comment="&quot;Added btn highlight&quot;" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2K4qsjiU1pi1dbtmC1DLviLu45d" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vrush/Desktop/react/FoodOrderingApp&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager">
+    <configuration name="start" type="js.build_tools.npm" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dc3ff0af-3fdc-4b22-97d1-57feb5bab610" name="Changes" comment="" />
+      <created>1673244413895</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673244413895</updated>
+      <workItem from="1673244415328" duration="6746000" />
+      <workItem from="1673257196807" duration="724000" />
+      <workItem from="1673259444372" duration="915000" />
+      <workItem from="1673267272566" duration="3559000" />
+      <workItem from="1673326588132" duration="1647000" />
+      <workItem from="1673337634107" duration="165000" />
+      <workItem from="1673337965141" duration="2458000" />
+      <workItem from="1673344906376" duration="8000" />
+      <workItem from="1673346222881" duration="822000" />
+      <workItem from="1673349289228" duration="448000" />
+      <workItem from="1673413522111" duration="2403000" />
+      <workItem from="1673415957695" duration="202000" />
+      <workItem from="1673416343032" duration="315000" />
+      <workItem from="1673416941615" duration="2496000" />
+      <workItem from="1673424060136" duration="3475000" />
+      <workItem from="1673430133887" duration="144000" />
+      <workItem from="1673439381497" duration="4892000" />
+      <workItem from="1673692707484" duration="278000" />
+      <workItem from="1673934371399" duration="40000" />
+      <workItem from="1674188496772" duration="148000" />
+      <workItem from="1674190694922" duration="3908000" />
+      <workItem from="1674200877838" duration="1746000" />
+      <workItem from="1674207550068" duration="1047000" />
+      <workItem from="1674208984020" duration="491000" />
+      <workItem from="1674209488240" duration="4073000" />
+      <workItem from="1674215357092" duration="3460000" />
+    </task>
+    <task id="LOCAL-00001" summary="&quot;Added btn highlight&quot;">
+      <created>1673447403251</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673447403251</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Added btn highlight&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Added btn highlight&quot;" />
+  </component>
+</project>

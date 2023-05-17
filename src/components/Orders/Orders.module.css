@@ -1,0 +1,8 @@
+.orders{
+    overflow: auto;
+    margin-top: 8rem;
+}
+.OrdersLoading{
+    text-align: center;
+    color: white;
+}
