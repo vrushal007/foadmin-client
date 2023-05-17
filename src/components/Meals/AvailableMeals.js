@@ -12,11 +12,14 @@ const AvailableMeals = () => {
     const [httpError,setHttpError] = useState()
     useEffect(()=>{
         setIsLoading(true)
-        
+
         fetchMeals()
         .then((meals)=>{
-            setMeals(meals)
+            setMeals(meals.data)
             setIsLoading(false)
+        })
+        .catch((err)=>{
+            setHttpError(err.message)
         })
         // const fetchMeals = async () => {
         //     setIsLoading(true)
@@ -45,7 +48,7 @@ const AvailableMeals = () => {
         //         setHttpError(err.message)
         //     })
     },[])
-
+    console.log("meals",meals)
     const mealsList = meals.map((meal) =>
         <MealItem
             key={meal._id}

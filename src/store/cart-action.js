@@ -19,7 +19,7 @@ export const fetchCartData = () => {
       }
       try{
           const cartData = await fetchData();
-          console.log("cartdata:",cartData)
+          // console.log("cartdata:",cartData)
           dispatch(cartActions.replaceCart({
             items:cartData.items || [],
             totalQuantity:cartData.totalQuantity,
@@ -44,7 +44,7 @@ export const sendCartData = (cart) => {
     }))
 
     const sendRequest = async () => {
-      console.log("cart:",cart)
+      // console.log("cart:",cart)
       const response = await axios.put(`${DATABASE_URL}/cart`,cart)
 
       // const response = await fetch(`${DATABASE_URL}/cart`,{
@@ -104,12 +104,12 @@ export const fetchOrders = async () => {
 
 export const sendOrder = async (data) => {
   const order = await axios.post(`${DATABASE_URL}/orders`, data)
-  return order;
+  return order.data;
 }
 
 export const addItem = async (data) => {
   const item = await axios.post(`${DATABASE_URL}/meals`,data)
-  return item
+  return item.data
 }
 
 export const fetchMeals = async () => {
