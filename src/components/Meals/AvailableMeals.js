@@ -13,11 +13,12 @@ const AvailableMeals = () => {
 
         const fetchMeals = async () => {
             setIsLoading(true)
-            const response = await fetch(`${DATABASE_URL}/meals`)
-            if(!(response.ok)){
-                throw new Error("Something went wrong!!")
-            }
-            const responseData = await response.json()
+            // const response = await fetch(`${DATABASE_URL}/meals`)
+            // if(!(response.ok)){
+            //     throw new Error("Something went wrong!!")
+            // }
+            // const responseData = await response.json()
+            const meals = await fetchMeals()
             // const loadedMeals = []
             // for(const key in responseData){
             //     loadedMeals.push({
@@ -28,7 +29,7 @@ const AvailableMeals = () => {
             //     });
             // }
             // console.log("loaded meals",loadedMeals)
-            setMeals(responseData);
+            setMeals(meals);
             setIsLoading(false)
         }
 

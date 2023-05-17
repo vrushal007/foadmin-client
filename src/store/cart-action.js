@@ -111,3 +111,8 @@ export const addItem = async (data) => {
   const item = await axios.post(`${DATABASE_URL}/meals`,data)
   return item
 }
+
+export const fetchMeals = async () => {
+  const response = axios.get(`${DATABASE_URL}/meals`)
+  return response
+}
