@@ -2,8 +2,8 @@ import { cartActions } from "./cart-slice"
 import { uiActions } from "./ui-slice"
 import axios from 'axios'
 
-// const DATABASE_URL = "https://food-app-react-c2eb2-default-rtdb.asia-southeast1.firebasedatabase.app"
-const DATABASE_URL = "http://localhost:3001"
+const DATABASE_URL = "https://foadminserver.onrender.com"
+// const DATABASE_URL = "http://localhost:3001"
 
 export const fetchCartData = () => {
     return async (dispatch) => {
