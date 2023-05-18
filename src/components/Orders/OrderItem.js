@@ -1,14 +1,12 @@
 import React from "react"
 import Card from "../UI/Card"
 import classes from './OrderItem.module.css'
+import {deleteOrder} from './../../store/cart-action'
 
-// const FIREBASE_LINK = `https://food-app-react-c2eb2-default-rtdb.asia-southeast1.firebasedatabase.app`
-const DATABASE_URL = "http://localhost:3001"
 function OrderItem(props) {
+    console.log(props.item)
     const deleteOrderHandler = () => {
-        fetch(`${DATABASE_URL}/orders/${props.item.id}`,{
-            method:'DELETE'
-        })
+        deleteOrder(props.item._id)
         .then(()=>{
             props.onDelete(props.item.user.name);
         })

@@ -116,3 +116,7 @@ export const fetchMeals = async () => {
   const response = axios.get(`${DATABASE_URL}/meals`)
   return response
 }
+
+export const deleteOrder = async (orderId) => {
+  const response = axios.delete(`${DATABASE_URL}/orders/${orderId}`)
+}
