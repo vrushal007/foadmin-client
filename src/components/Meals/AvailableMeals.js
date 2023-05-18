@@ -48,7 +48,7 @@ const AvailableMeals = () => {
         //         setHttpError(err.message)
         //     })
     },[])
-    console.log("meals",meals)
+    // console.log("meals",meals)
     const mealsList = meals.map((meal) =>
         <MealItem
             key={meal._id}
