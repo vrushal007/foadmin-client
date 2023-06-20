@@ -8,33 +8,34 @@ import {fetchCartData, sendCartData} from './store/cart-action';
 import Orders from "./components/Orders/Orders";
 import {Routes,Route} from "react-router-dom";
 import AddItemForm from "./components/Meals/AddItem/AddItemForm";
+import {useGetCartQuery} from "./api/cartApi";
 
 let isInitial = true;
 
 function App() {
-    const dispatch = useDispatch();
-    // const cartIsVisible = useSelector(state => state.ui.cartIsVisible)
-    const cart = useSelector(state => state.cart)
-    const notification = useSelector(state => state.ui.Notification)
-    // console.log(notification);
-    const notiCnt = notification && <Notification
-        status={notification.status}
-        message={notification.message}
-        title={notification.title}
-    />
-    useEffect(()=>{
-        dispatch(fetchCartData())
-    },[dispatch])
+    // const dispatch = useDispatch();
+    // // const cartIsVisible = useSelector(state => state.ui.cartIsVisible)
+    // const cart = useSelector(state => state.cart)
+    // const notification = useSelector(state => state.ui.Notification)
+    // // console.log(notification);
+    // const notiCnt = notification && <Notification
+    //     status={notification.status}
+    //     message={notification.message}
+    //     title={notification.title}
+    // />
+    // useEffect(()=>{
+    //     dispatch(fetchCartData())
+    // },[dispatch])
 
-    useEffect(()=>{
-        if(isInitial){
-          isInitial = false;
-          return;
-        }
-        if(cart.changed){
-          dispatch(sendCartData(cart));
-        }
-    },[cart,dispatch])
+    // useEffect(()=>{
+    //     if(isInitial){
+    //       isInitial = false;
+    //       return;
+    //     }
+    //     // if(cart.changed){
+    //     //   dispatch(sendCartData(cart));
+    //     // }
+    // },[cart,dispatch])
 
     // const [cartIsShown,setCartIsShown] = useState(false);
 
@@ -48,7 +49,7 @@ function App() {
     return (
         <Fragment>
             <Header />
-            {notiCnt}
+            {/* {notiCnt} */}
             <Routes>
                 <Route path="/" element={<Meals />} />
                 <Route path="/cart" element={<Cart />} />

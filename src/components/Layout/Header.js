@@ -4,19 +4,22 @@ import HeaderCartButton from "./HeaderCartButton";
 import {Link} from "react-router-dom";
 import {useSelector} from "react-redux"
 import {fetchOrders} from "../../store/cart-action";
+import {useGetCartQuery} from "../../api/cartApi";
 
 const Header = (props) => {
-    const items = useSelector(state => state.cart.items)
-    const numberOfCartItems = items.reduce((curNumber, item) => {
-        return curNumber + item.amount;
-    }, 0);
+    // const items = useSelector(state => state.cart.items)
+    const {data} = useGetCartQuery()
+    const numberOfCartItems = 0 
+    //  data.items.reduce((curNumber, item) => {
+    //     return curNumber + item.amount;
+    // }, 0);
     const [numberOfOrders,setNumberOfOrders] = useState(0)
-    useEffect(()=>{
-        fetchOrders()
-        .then(data=>{
-            setNumberOfOrders(data.length)
-        })
-    })
+    // useEffect(()=>{
+    //     fetchOrders()
+    //     .then(data=>{
+    //         setNumberOfOrders(data.length)
+    //     })
+    // })
     return <Fragment>
         <header className={classes.header}>
             <Link to='/' id={classes.heading}><h1>HappyMeals</h1></Link>
