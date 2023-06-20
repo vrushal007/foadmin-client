@@ -4,12 +4,15 @@ import classes from './AddItemForm.module.css'
 import Card from '../../UI/Card'
 import {useNavigate} from 'react-router-dom'
 import {addItem} from '../../../store/cart-action'
+import {useCreateMealsMutation} from '../../../api/mealsApi'
 
 function AddItemForm() {
   const nameInpRef = useRef()
   const priceInpRef = useRef()
   const descInptRef = useRef()
   const navigate = useNavigate()
+
+  const [createMeals] = useCreateMealsMutation()
 
   const submithandler = (e) => {
     e.preventDefault();
@@ -28,10 +31,11 @@ function AddItemForm() {
     // }).catch((err)=>{
     //   console.log("err:",err)
     // })
-    addItem(body)
-    .then((data)=>{
-      navigate('/')
-    })
+    // addItem(body)
+    // .then((data)=>{
+    //   navigate('/')
+    // })
+    createMeals(body)
   }
   return (
     <div className={classes.container}>

@@ -20,6 +20,7 @@ const MealItem = props => {
     // price:props.price,
     // name:props.name
     // });
+  
     // dispatch(cartActions.addItem({
     //     _id:props._id,
     //     amount:amount,
@@ -30,10 +31,10 @@ const MealItem = props => {
     const findIndex = isSuccess && cart.items.findIndex(itm => itm._id === props._id)
     const updatedCartItem = findItem && {
       ...findItem,
-      amount: findItem.amount + 1
+      amount: amount
     }
-    console.log('found item:',findItem)
-    console.log('updated item:',updatedCartItem)
+    // console.log('found item:',findItem)
+    // console.log('updated item:',updatedCartItem)
     const updatedItems = updatedCartItem
       ? cart.items.map(itm => {
           if (itm._id === props._id) {
@@ -49,7 +50,7 @@ const MealItem = props => {
           name: props.name
         })
     const updatedCart = {
-      totalAmount: cart.totalAmount + props.price,
+      totalAmount: cart.totalAmount + (props.price * amount),
       totalQuantity: cart.totalQuantity + 1,
       items: updatedItems,
       _id: cart._id

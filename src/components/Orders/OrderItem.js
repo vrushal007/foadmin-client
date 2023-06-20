@@ -1,15 +1,15 @@
 import React from "react"
 import Card from "../UI/Card"
 import classes from './OrderItem.module.css'
-import {deleteOrder} from './../../store/cart-action'
+// import {deleteOrder} from './../../store/cart-action'
+import {useDeleteOrderMutation} from "../../api/ordersApi"
 
 function OrderItem(props) {
-    console.log(props.item)
+    // console.log(props.item)
+    const [deleteOrder] = useDeleteOrderMutation(props.item._id)
     const deleteOrderHandler = () => {
         deleteOrder(props.item._id)
-        .then(()=>{
-            props.onDelete(props.item.user.name);
-        })
+        props.onDelete(props.item.user.name);
     }
     console.log(props)
         /*

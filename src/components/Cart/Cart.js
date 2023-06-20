@@ -5,9 +5,10 @@ import CartItem from "./CartItem";
 import Checkout from "./Checkout";
 import { useDispatch, useSelector } from 'react-redux';
 import { cartActions } from '../../store/cart-slice';
-import {sendCartData, sendOrder} from '../../store/cart-action'
+// import {sendCartData, sendOrder} from '../../store/cart-action'
 import {Link} from 'react-router-dom';
 import {useGetCartQuery, useReplaceCartMutation} from "../../api/cartApi";
+import {useSendOrdersMutation} from "../../api/ordersApi";
 
 const Cart = (props) => {
     console.log("rendered")
@@ -20,6 +21,7 @@ const Cart = (props) => {
 
     const { data:cart, isSuccess } = useGetCartQuery()
     const [updateCart] = useReplaceCartMutation()
+    const [sendOrder] = useSendOrdersMutation()
     console.log(isSuccess && cart)
     // const items = useSelector(state => state.cart.items)
     // const totalAmount = useSelector(state=>state.cart.totalAmount)
@@ -76,6 +78,12 @@ const Cart = (props) => {
         })
         .then((data)=>{
             console.log(data)
+        })
+        updateCart({
+            totalAmount:0,
+            totalQuantity:0,
+            items:[],
+            _id:cart._id
         })
         // dispatch(cartActions.replaceCart({
         //     items:[],
